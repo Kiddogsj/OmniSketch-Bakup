@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/Demo.dir/test/TestSketch.cpp.o  -o Demo 
