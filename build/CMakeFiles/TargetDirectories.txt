@@ -1,0 +1,3 @@
+/home/hikari/WorkSpace/OmniSketch/build/CMakeFiles/rebuild_cache.dir
+/home/hikari/WorkSpace/OmniSketch/build/CMakeFiles/edit_cache.dir
+/home/hikari/WorkSpace/OmniSketch/build/CMakeFiles/driver.dir

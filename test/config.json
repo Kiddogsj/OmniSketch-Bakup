@@ -1,0 +1,5 @@
+{
+    "Sketch": ["CMSketch", "CUSketch"],
+    "Metric": ["Are", "Recall"],
+    "Memory": ["100k", "200k", "300k", "400k", "500k", "600k"]
+}
