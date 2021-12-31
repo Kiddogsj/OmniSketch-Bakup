@@ -1,4 +1,4 @@
-# SketchLab CPP
+# OmniSketch
 
 ## Getting Started
 
@@ -11,8 +11,9 @@ git clone git@dl1:Ferric/SketchLab_CPP.git
 配置并编译：
 
 ```shell
-cd SketchLab_CPP
-cmake . && make
+cd OmniSketch
+cd build
+cmake .. && make
 ```
 
 为执行对算法的准确性 /
