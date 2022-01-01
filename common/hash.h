@@ -614,13 +614,13 @@ class CRCHash {
 
     return (init ^ final_xor);
   }
-  uint32_t crc_body_reversed_true(const uint8_t* data, uint16_t len, uint32_t code, uint32_t init, uint32_t final_xor) const {
-    for (int16_t VP_bytes = 0; VP_bytes < len; VP_bytes++) {
-        init = (init >> 8) ^ crc_ObtenValorDeTabla_Reversed(((uint8_t)(init & 0xFF)) ^ data[VP_bytes], code);
-    }
+  // uint32_t crc_body_reversed_true(const uint8_t* data, uint16_t len, uint32_t code, uint32_t init, uint32_t final_xor) const {
+  //   for (int16_t VP_bytes = 0; VP_bytes < len; VP_bytes++) {
+  //       init = (init >> 8) ^ crc_ObtenValorDeTabla_Reversed(((uint8_t)(init & 0xFF)) ^ data[VP_bytes], code);
+  //   }
 
-    return (init ^ final_xor);
-  }
+  //   return (init ^ final_xor);
+  // }
   uint32_t crc32(const uint8_t* data, uint16_t len) const {
     return crc_body_reversed_true(data, len, 0x04C11DB7, 0xFFFFFFFF, 0xFFFFFFFF);
   }
