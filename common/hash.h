@@ -546,11 +546,11 @@ class CRCHash {
         uint64_t hash, uint64_t scale, uint64_t hardener) const {
 
 	  while (n) {
-      fprintf(stderr, "    %lu %lu %lu %u\n", n, hash, scale, *data);
+      fprintf(stderr, "    %llu %llu %llu %u\n", n, hash, scale, *data);
 		  hash *= scale;
 		  hash += *data++;
 		  n--;
-      fprintf(stderr, "        internal %lu\n", hash);
+      fprintf(stderr, "        internal %llu\n", hash);
 	  }
 	  return hash ^ hardener;
   }
@@ -684,6 +684,7 @@ public:
         case 7: return xfer(data, len);
         case 8: return jamcrc(data, len);
         default: fprintf(stderr, "Unsupport hash id: %d.\n", hashid);
+        return 0;
     }
   }
   template <int32_t key_len>
