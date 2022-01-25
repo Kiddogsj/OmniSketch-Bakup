@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+div.gallery {
+  margin: 20px;
+  border: 3px solid #ccc;
+  float: left;
+  width: 250px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+p {
+  text-indent: 30px;
+}
+
+h3 {
+  text-indent: 30px;
+}
+
+body {
+  background-image: url("https://www.w3school.com.cn/i/paper.jpg");
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="http://127.0.0.1:5000/">Dashboard</a></li>
+  <li><a href="http://127.0.0.1:5000/parser">Parser</a></li>
+  <li><a href="http://127.0.0.1:5000/benchmark">Benchmark</a></li>
+  <li style="float:right"><a class="active" href="http://127.0.0.1:5000/">Help</a></li>
+</ul>
+
+<h2>Parser Setup</h2>
+
+<form action="http://127.0.0.1:5000/parserok" method="post">
+Dateset Path: 
+  <input type="text" name="input_path"><br>
+Output Path:
+  <input type="text" name="output_path"><br>
+Packet Count:
+  <input type="text" name="packet_count"><br>
+Flow Count:
+  <input type="text" name="flow_count"><br>
+Epoch Num:
+  <input type="text" name="epoch_num"><br>
+Epoch Length:
+  <input type="text" name="epoch_len"><br>
+Write to Binary File:
+    <input type="radio" name="write_to_binary_file" value="true">Yes
+    <input type="radio" name="write_to_binary_file" value="false">No<br>
+Write to Text File:
+    <input type="radio" name="write_to_txt_file" value="true">Yes
+    <input type="radio" name="write_to_txt_file" value="false">No<br>
+Write to Pcap File:
+    <input type="radio" name="write_to_pcap_file" value="true">Yes
+    <input type="radio" name="write_to_pcap_file" value="false">No<br>
+Network Endian:
+    <input type="radio" name="network_endian" value="true">Yes
+    <input type="radio" name="network_endian" value="false">No<br>
+Key Length:
+    <input type="text" name="key_len"><br>
+Timestamp:
+    <input type="text" name="val_timestamp"><br>
+Length:
+    <input type="text" name="val_length"><br>
+Start Parsing:
+    <input type="radio" name="run" value="true">Yes
+    <input type="radio" name="run" value="false">No<br>
+<button type="submit">Generate</button>
+</form>
+
+</body>
+</html>

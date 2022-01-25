@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+div.gallery {
+  margin: 20px;
+  border: 3px solid #ccc;
+  float: left;
+  width: 250px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+p {
+  text-indent: 30px;
+}
+
+h3 {
+  text-indent: 30px;
+}
+
+body {
+  background-image: url("https://www.w3school.com.cn/i/paper.jpg");
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="http://127.0.0.1:5000/">Dashboard</a></li>
+  <li><a href="http://127.0.0.1:5000/parser">Parser</a></li>
+  <li><a href="http://127.0.0.1:5000/benchmark">Benchmark</a></li>
+  <li style="float:right"><a class="active" href="http://127.0.0.1:5000/">Help</a></li>
+</ul>
+
+<h2>Benchmark Setup</h2>
+
+<form action="http://127.0.0.1:5000/benchmarkok" method="post">
+Sketch Name: 
+  <input type="text" name="sketch_name"><br>
+Test Name: 
+  <input type="text" name="test_name"><br>
+Parameters:
+  <input type="text" name="parameters"><br>
+<button type="submit">Run</button>
+</form>
+
+</body>
+</html>
